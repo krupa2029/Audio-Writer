@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mt-5">
+             Speech to Text Converter
+        </h2>
+
+
+            <div class="form-group">
+                <textarea id="textbox" rows="6" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group">
+                
+                <button id="start-btn" class="btn btn-primary btn-block">
+                    Start Recording
+                </button>
+                <button id="stop-btn" class="btn btn-danger btn-block mb-3">
+                    Stop Recording
+                </button>
+                <p id="instructions">Press Button to start Recording Speech. </p>
+
+            </div>
+        
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</html>
