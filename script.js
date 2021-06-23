@@ -8,6 +8,10 @@ var instructions= $("#instructions")
 
 var content = ''
 
+// let output = document.getElementById('textbox');
+
+let buttons = document.getElementsByClassName('tool--btn');
+
 recognition.continuous = true;
 
 // recognition is started
@@ -51,3 +55,15 @@ $("#stop-btn").click(function(event){
 textbox.on('input', function (){
     content = $(this).val
 })
+
+for (let btn of buttons) {
+	btn.addEventListener('click', () => {
+		let cmd = btn.dataset['command'];
+		if(cmd === 'createlink') {
+			let url = prompt("Enter the link here: ", "http:\/\/");
+			document.execCommand(cmd, false, url);
+		} else {
+			document.execCommand(cmd, false, null);
+		}
+	})
+}

@@ -5,25 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speech to Text</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-vlOMx0hKjUCl4WzuhIhSNZSm2yQCaf0mOU1hEDK/iztH3gU4v5NMmJln9273A6Jz" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <div class="container">
-        <h2 class="text-center mt-5">
-             Speech to Text Converter
-        </h2>
+
+            <h2 class="text-center mt-5">
+                Speech to Text Converter
+            </h2>
+
+            <div class="toolbar">
+                <ul class="tool-list">
+                    <li class="tool">
+                        <button 
+                            type="button" 
+                            data-command='justifyLeft'
+                            class="tool--btn">
+                            <i class=' fas fa-align-left'></i>
+                        </button>
+                    </li>
+                    <li class="tool">
+                        <button 
+                            type="button" 
+                            data-command='justifyCenter' 
+                            class="tool--btn">
+                            <i class=' fas fa-align-center'></i>
+                        </button>
+                    </li>
+                    <li class="tool">
+                        <button 
+                            type="button" 
+                            data-command="bold" 
+                            class="tool--btn">
+                            <i class=' fas fa-bold'></i>
+                        </button>
+                    </li>
+                    <li class="tool">
+                        <button 
+                            type="button" 
+                            data-command="italic"
+                            class="tool--btn">
+                            <i class=' fas fa-italic'></i>
+                        </button>
+                    </li>
+                    <li class="tool">
+                        <button 
+                            type="button" 
+                            data-command="underline"
+                            class="tool--btn">
+                            <i class=' fas fa-underline'></i>
+                        </button>
+                    </li>
+                    <li class="tool">
+                        <button 
+                            type="button" 
+                            data-command="insertOrderedList"
+                            class="tool--btn">
+                            <i class=' fas fa-list-ol'></i>
+                        </button>
+                    </li>
+                    <li class="tool">
+                        <button 
+                            type="button" 
+                            data-command="insertUnorderedList"
+                            class="tool--btn">
+                            <i class=' fas fa-list-ul'></i>
+                        </button>
+                    </li>
+                    <li class="tool">
+                        <button 
+                            type="button" 
+                            data-command="createlink" 
+                            class="tool--btn">
+                            <i class=' fas fa-link'></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
 
 
-            <div class="form-group">
-                <textarea id="textbox" rows="6" class="form-control"></textarea>
+            <div class="textbox">
+            <textarea id="textbox" contenteditable="true"></textarea>
             </div>
 
             <div class="form-group">
                 
-                <button id="start-btn" class="btn btn-primary btn-block">
+                <button class="Record-Btn" id="start-btn">
                     Start Recording
                 </button>
-                <button id="stop-btn" class="btn btn-danger btn-block mb-3">
+                <button class="Record-Btn" id="stop-btn">
                     Stop Recording
                 </button>
                 <p id="instructions">Press Button to start Recording Speech. </p>
@@ -35,4 +107,5 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="script.js"></script>
+
 </html>
